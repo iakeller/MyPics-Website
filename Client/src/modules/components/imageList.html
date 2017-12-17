@@ -1,0 +1,69 @@
+<template>
+		<!-- <link href="../../resources/css/styles.css" rel="stylesheet" /> -->
+		<!-- <div id="errorMsg" innerhtml.bind="loginError"></div> -->
+
+    <table width="58%" border="0" cellpadding="6">
+        <tr>
+          <td>
+            <div align="left">
+              <h2>Images in this Gallery</h2>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+        <table width="58%" border="0" cellpadding="6">
+            <tr>
+              <td>
+                <div align="left">
+                  <button type="button" class="btn btn-primary .btn-md" click.trigger="createImage()">Add Image to Gallery</button>
+                  &nbsp;
+                  <button type="button" class="btn btn-info .btn-md" click.trigger="backToList()">Back to Galleries</button>
+
+                </div>
+              </td>
+            </tr>
+          </table>
+
+	<div show.bind="images.imagesArray.length">
+	<div class="table-responsive">
+		<table class="table">
+				<thead>
+					<tr>
+                                        <th>Image</th>
+                                        <!-- <th>Name</th>
+                                        <th>Description</th>
+                                        <th>FileName</th>
+                                        <th>Date Uploaded</th> -->
+                                        <!-- <th>Edit | Delete</th> -->
+					</tr>
+				</thead>
+				<tbody>
+					<tr repeat.for = "image of images.imagesArray">
+						<!--<th>${image.image} </th> This should be the Thumbnail
+						<td><a>${image.file.fileName}</a></td>-->
+						<td>  <a href="uploads/${image.galleryId}/${image.file.fileName}"
+							target="_blank"><img src="uploads/${image.galleryId}/${image.file.fileName}"  style="width:50px; height: 50px;"></a>
+              &nbsp;&nbsp;<button type="button" class="btn btn-primary btn-sm" click.trigger="editImage(image)">Edit</button>
+              &nbsp;
+              <i click.trigger="deleteImage(image)"class="fa fa-trash rightMargin" aria-hidden="true"></i>
+              <!-- <button type="button" class="btn btn-info btn-sm" click.trigger="deleteImage(image)">Delete</button> -->
+              <!-- <i click.trigger="editImage(image)" class="fa fa-pencil rightMargin" aria-hidden="true"></i>
+							<i click.trigger="deleteImage(image)"class="fa fa-trash rightMargin" aria-hidden="true"></i> -->
+
+
+
+					</tr>
+				</tbody>
+			</table>
+	</div>
+	<div show.bind="!images.imagesArray.length">
+			<h2>Cripes again! You don't have any pics :(</h2>	</div>
+
+        </div>
+    </div>
+</template>
+
+
+
+

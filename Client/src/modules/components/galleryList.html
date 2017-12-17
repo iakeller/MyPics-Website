@@ -1,0 +1,74 @@
+<template>
+    <!-- <center> -->
+        <table width="58%" border="0" cellpadding="6">
+            <tr>
+              <td>
+                <div align="left">
+                  <h2>Your MyPics Gallery List</h2>
+                </div>
+              </td>
+            </tr>
+          </table>
+      <table width="58%" border="0" cellpadding="6">
+        <tr>
+          <td>
+            <div align="left">
+              <button type="button" class="btn btn-primary .btn-md" click.trigger="createGallery()">Create a Gallery</button>
+              &nbsp;
+              <button type="button" class="btn btn-info .btn-md" click.trigger="logout()">Logout</button>
+  
+            </div>
+          </td>
+        </tr>
+      </table>
+    <!-- </center> -->
+    <center>
+      <div class="containter">
+      <div show.bind="galleries.galleriesArray.length"></div>
+<div class="table-responsive">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Gallery</th>
+                 <th>Description</th>
+                
+                 <th>Edit | Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr repeat.for = "gallery of galleries.galleriesArray">
+                <th click.trigger="checkGallery(gallery)">${gallery.gallery}</th>
+               
+                <td>${gallery.description}</td> 
+                
+                 <td>
+                				<i click.trigger="editGallery(gallery)" class="fa fa-pencil rightMargin" aria-hidden="true"></i>
+                  <i click.trigger="deleteGallery(gallery)"class="fa fa-trash rightMargin" aria-hidden="true"></i>
+           					 </td>
+    
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      </div>
+    </div>
+  </center>
+  <div show.bind="!galleries.galleriesArray.length">
+      &nbsp;
+      &nbsp;
+      <center>
+          <table width="58%" border="0" cellpadding="6">
+            <tr>
+              <td>
+                <div align="left">
+                  <h2>Cripes! You don't have any galleries :(</h2>
+                 
+                </div>
+      </div>
+    
+    
+    
+            </div>
+        </div>
+    </template>
+    

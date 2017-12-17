@@ -1,0 +1,72 @@
+<template>
+    <!-- <link href="../../resources/css/styles.css" rel="stylesheet" /> -->
+
+<center><div class="card" style="width:600px">
+        <div class="card-body">
+                <h4 class="card-title">Login to MyPics</h4>
+                <div id="errorMsg" innerhtml.bind="loginError"></div>
+<div class="form-group col">
+    <div class="col-lg-6 col-lg-offset-6">  
+    <input value.bind="email" type="email" class="form-control" id="email" placeholder="Email"></input>
+    <input value.bind="password" type="password" class="form-control" id="password" placeholder="Password"></input>
+<br>
+<button type="button" class="btn btn-primary" click.trigger="login()">Login</button>  
+    <button type="button" class="btn btn-link" click.trigger="showRegister()">Register</button>
+</div>
+</div>
+</div>    
+</div>
+
+</center>
+</template>
+  
+
+<!-- <template>
+  <link href="../../resources/css/styles.css" rel="stylesheet" />
+  <center>
+    <div class="card" style="width:600px">
+      <div class="card-body">
+        <h4 class="card-title">Login to MyPics</h4>
+        <div class="form-group col">
+          <div class="col-lg-6 col-lg-offset-6">
+            <table width="100%" border="0" cellpadding="6">
+              <tr>
+                <td>
+                    <div id="errorMsg" innerhtml.bind="loginError"></div>
+                    <form class="form-inline">
+                  <label for="email"></label>
+                  <input value.bind="email" type="email" autofocus class="form-control" id="email" placeholder="Email"></input>
+                  </form>
+                </td>
+              </tr>
+            </table>
+
+
+            <table width="100%" border="0" cellpadding="6">
+              <tr>
+                <td>
+                    <form class="form-inline">
+                  <label for="password">
+                  </label>
+                  <input value.bind="password" type="password" class="form-control" id="password" placeholder="Password"></input>
+                  </form>
+                </td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellpadding="6">
+              <tr>
+                <td>
+                  <button type="button" class="btn btn-primary btn-md" click.trigger="login()">Login</button>
+                  &nbsp;&nbsp;&nbsp;
+                  <span class="registerLink" click.trigger="showRegister()">Register</span>
+                </td>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </center>
+</template> -->

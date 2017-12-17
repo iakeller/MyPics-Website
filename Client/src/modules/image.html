@@ -1,0 +1,6 @@
+<template>
+  <!-- <title>${title}</title>
+  <h1>${message} </h1>  -->
+    <compose show.bind="showList" show.bind="!showForm" view="./components/imageList.html"></compose>
+    <compose show.bind="!showList" show.bind="showForm" view="./components/imageForm.html"></compose>   
+</template>

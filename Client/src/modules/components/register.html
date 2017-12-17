@@ -1,0 +1,27 @@
+<template>
+  <h1 align="center">Register for a MyPics Account</h1>
+
+  <div align="center">
+    <table width="33%" border="0" cellpadding="6">
+      <tr>
+        <td width="33%">First Name:</td>
+        <td width="67%"><input value.bind="user.firstName"></td>
+      </tr>
+      <tr>
+        <td>Last Name:</td>
+        <td><input value.bind="user.lastName"></td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><input value.bind="user.email"></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input value.bind="user.password"></td>
+      </tr>
+    </table>
+    <button click.trigger="save()" class="btn btn-primary topMargin">Register</button>
+</div>
+</template>
+
+

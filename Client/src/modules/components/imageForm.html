@@ -1,0 +1,40 @@
+<template>
+		<center>
+	  <h1 align="center">Add a Photo</h1>
+	  &nbsp;
+	  &nbsp;
+	  <div align="center">
+		<table width="20%" border="0" cellpadding="6">
+		  <tr>
+			<td width="50%">
+			  <label class="btn btn-primary">
+				Browse Image
+				<input type="file" style="display: none;" change.delegate="changeFiles()" files.bind="files">
+        </label>
+			</td>
+			<td width="75%"><button type="button" class="btn btn-md" click.trigger="back()">Back to Gallery</button>
+					<!-- <button click.trigger="saveImage()" class="btn btn-primary topMargin">Submit</button> -->
+			</td>
+		  </tr>
+		</table>
+	<table align="center" width="50%" border="0" cellpadding="6">
+				<tr>
+				  <td width="200%">
+						<div class="col-8">
+								<ul>
+								  <li repeat.for="file of filesToUpload" class="list-group-item"> <button click.trigger="saveImage()" class="btn btn-primary btn-sm topMargin">Submit</button>
+									${file.name}
+									<span click.delegate="removeFile($index)" class="pull-right">
+									  <i class="fa fa-trash" aria-hidden="true">
+									  </i>
+									</span>
+								  </li>
+								</ul>
+							  </div>
+				  </td>
+				</tr>
+			  </table>
+	  </div>
+	</center>
+	</template>
+	
